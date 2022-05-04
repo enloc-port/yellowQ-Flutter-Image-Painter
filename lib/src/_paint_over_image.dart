@@ -33,7 +33,7 @@ class ImagePainter extends StatefulWidget {
     this.colorIcon,
     this.undoIcon,
     this.isSignature = false,
-    this.controlsAtTop = true,
+    this.controlsAtTop = false,
     this.signatureBackgroundColor,
     this.colors,
   }) : super(key: key);
