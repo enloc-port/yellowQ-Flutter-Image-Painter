@@ -710,7 +710,7 @@ class ImagePainterState extends State<ImagePainter> {
                 widget.brushIcon ?? Icon(Icons.brush, color: Colors.grey[700]),
             itemBuilder: (_) => [_showRangeSlider()],
           ),
-          IconButton(icon: Icon(Icons.text_format), onPressed: _openTextDialog),
+          // IconButton(icon: Icon(Icons.text_format), onPressed: _openTextDialog),
           const Spacer(),
           IconButton(
               tooltip: "Letze Anpassung rückgängig machen",
