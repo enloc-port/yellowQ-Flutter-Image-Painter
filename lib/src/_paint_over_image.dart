@@ -41,15 +41,17 @@ class ImagePainter extends StatefulWidget {
   ///Constructor for loading image from network url.
   factory ImagePainter.network(String url,
       {@required Key key,
-      double height,
-      double width,
-      Widget placeholderWidget,
-      bool scalable,
-      List<Color> colors,
-      Widget brushIcon,
-      Widget undoIcon,
-      Widget clearAllIcon,
-      Widget colorIcon}) {
+        double height,
+        double width,
+        Widget placeholderWidget,
+        bool scalable,
+        List<Color> colors,
+        Widget brushIcon,
+        Widget undoIcon,
+        Widget clearAllIcon,
+        Widget colorIcon,
+        bool controlsAtTop,
+      }) {
     return ImagePainter._(
       key: key,
       networkUrl: url,
@@ -61,21 +63,24 @@ class ImagePainter extends StatefulWidget {
       undoIcon: undoIcon,
       colorIcon: colorIcon,
       clearAllIcon: clearAllIcon,
+      controlsAtTop: controlsAtTop,
     );
   }
 
   ///Constructor for loading image from assetPath.
   factory ImagePainter.asset(String path,
       {@required Key key,
-      double height,
-      double width,
-      bool scalable,
-      Widget placeholderWidget,
-      List<Color> colors,
-      Widget brushIcon,
-      Widget undoIcon,
-      Widget clearAllIcon,
-      Widget colorIcon}) {
+        double height,
+        double width,
+        bool scalable,
+        Widget placeholderWidget,
+        List<Color> colors,
+        Widget brushIcon,
+        Widget undoIcon,
+        Widget clearAllIcon,
+        Widget colorIcon,
+        bool controlsAtTop,
+      }) {
     return ImagePainter._(
       key: key,
       assetPath: path,
@@ -88,21 +93,24 @@ class ImagePainter extends StatefulWidget {
       undoIcon: undoIcon,
       colorIcon: colorIcon,
       clearAllIcon: clearAllIcon,
+      controlsAtTop: controlsAtTop,
     );
   }
 
   ///Constructor for loading image from [File].
   factory ImagePainter.file(File file,
       {@required Key key,
-      double height,
-      double width,
-      bool scalable,
-      Widget placeholderWidget,
-      List<Color> colors,
-      Widget brushIcon,
-      Widget undoIcon,
-      Widget clearAllIcon,
-      Widget colorIcon}) {
+        double height,
+        double width,
+        bool scalable,
+        Widget placeholderWidget,
+        List<Color> colors,
+        Widget brushIcon,
+        Widget undoIcon,
+        Widget clearAllIcon,
+        Widget colorIcon,
+        bool controlsAtTop,
+      }) {
     return ImagePainter._(
       key: key,
       file: file,
@@ -115,21 +123,24 @@ class ImagePainter extends StatefulWidget {
       undoIcon: undoIcon,
       colorIcon: colorIcon,
       clearAllIcon: clearAllIcon,
+      controlsAtTop: controlsAtTop,
     );
   }
 
   ///Constructor for loading image from memory.
   factory ImagePainter.memory(Uint8List byteArray,
       {@required Key key,
-      double height,
-      double width,
-      bool scalable,
-      Widget placeholderWidget,
-      List<Color> colors,
-      Widget brushIcon,
-      Widget undoIcon,
-      Widget clearAllIcon,
-      Widget colorIcon}) {
+        double height,
+        double width,
+        bool scalable,
+        Widget placeholderWidget,
+        List<Color> colors,
+        Widget brushIcon,
+        Widget undoIcon,
+        Widget clearAllIcon,
+        Widget colorIcon,
+        bool controlsAtTop,
+      }) {
     return ImagePainter._(
       key: key,
       byteArray: byteArray,
@@ -142,20 +153,23 @@ class ImagePainter extends StatefulWidget {
       undoIcon: undoIcon,
       colorIcon: colorIcon,
       clearAllIcon: clearAllIcon,
+      controlsAtTop: controlsAtTop,
     );
   }
 
   ///Constructor for signature painting.
   factory ImagePainter.signature(
       {@required Key key,
-      Color signatureBgColor,
-      double height,
-      double width,
-      List<Color> colors,
-      Widget brushIcon,
-      Widget undoIcon,
-      Widget clearAllIcon,
-      Widget colorIcon}) {
+        Color signatureBgColor,
+        double height,
+        double width,
+        List<Color> colors,
+        Widget brushIcon,
+        Widget undoIcon,
+        Widget clearAllIcon,
+        Widget colorIcon,
+        bool controlsAtTop,
+      }) {
     return ImagePainter._(
       key: key,
       height: height,
@@ -168,6 +182,7 @@ class ImagePainter extends StatefulWidget {
       undoIcon: undoIcon,
       colorIcon: colorIcon,
       clearAllIcon: clearAllIcon,
+      controlsAtTop: controlsAtTop,
     );
   }
 
