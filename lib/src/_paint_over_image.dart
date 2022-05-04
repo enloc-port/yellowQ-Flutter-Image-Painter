@@ -628,7 +628,7 @@ class ImagePainterState extends State<ImagePainter> {
                 alignment: Alignment.bottomRight,
                 child: TextButton(
                     child: Text(
-                      "Done",
+                      "Fertig",
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
@@ -668,7 +668,7 @@ class ImagePainterState extends State<ImagePainter> {
               valueListenable: _controller,
               builder: (_, _ctrl, __) {
                 return PopupMenuButton(
-                  tooltip: "Change mode",
+                  tooltip: "Modus wechseln",
                   shape: ContinuousRectangleBorder(
                     borderRadius: BorderRadius.circular(40),
                   ),
@@ -688,7 +688,7 @@ class ImagePainterState extends State<ImagePainter> {
                   shape: ContinuousRectangleBorder(
                     borderRadius: BorderRadius.circular(20),
                   ),
-                  tooltip: "Change color",
+                  tooltip: "Farbe ändern",
                   icon: widget.colorIcon ??
                       Container(
                         padding: EdgeInsets.all(2.0),
@@ -702,7 +702,7 @@ class ImagePainterState extends State<ImagePainter> {
                 );
               }),
           PopupMenuButton(
-            tooltip: "Change Brush Size",
+            tooltip: "Strichbreite ändern",
             shape: ContinuousRectangleBorder(
               borderRadius: BorderRadius.circular(20),
             ),
@@ -713,7 +713,7 @@ class ImagePainterState extends State<ImagePainter> {
           IconButton(icon: Icon(Icons.text_format), onPressed: _openTextDialog),
           const Spacer(),
           IconButton(
-              tooltip: "Undo",
+              tooltip: "Letze Anpassung rückgängig machen",
               icon:
                   widget.undoIcon ?? Icon(Icons.reply, color: Colors.grey[700]),
               onPressed: () {
@@ -722,7 +722,7 @@ class ImagePainterState extends State<ImagePainter> {
                 }
               }),
           IconButton(
-            tooltip: "Clear all progress",
+            tooltip: "Alle Anpassungen entfernen",
             icon: widget.clearAllIcon ??
                 Icon(Icons.clear, color: Colors.grey[700]),
             onPressed: () => setState(_paintHistory.clear),
